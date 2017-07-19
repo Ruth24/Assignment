@@ -9,7 +9,7 @@ var http = require('http');
 app.use(express.static('.'));
 //app.use(express.static(path.join(__dirname, 'public')));
 
-
+	// Routing
     app.get('/', function(req, res) {
         res.sendFile(__dirname + "/" + "webpage.html");
     });
@@ -186,11 +186,6 @@ var allevennum = [{
 
 
 
-
-
-
-
-
 app.post('/find_substring/:param_string', function (req, res){
 	
 	var ip_string = req.params.param_string;
@@ -301,4 +296,4 @@ app.post('/match_twice/:ip_value', function (req, res){
 
 });
 
-console.log("listening to 3000");
+console.log("listening to port 3000");
